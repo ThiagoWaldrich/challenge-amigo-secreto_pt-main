@@ -25,3 +25,16 @@ function adicionarAmigo() {
         })
     }
 }
+
+function sortearAmigo(){
+    if(amigos.length===0){
+        alert("Nenhum amigo disponível para o sorteio.")
+        return;
+    }
+
+    let indiceSorteado = Math.floor(Math.random()*amigos.length);
+    let amigoSorteado = amigos[indiceSorteado];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li> O amigo sorteado foi: <strong>${amigoSorteado}</strong></li>`;
+}
